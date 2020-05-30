@@ -17,7 +17,6 @@ package com.example.tagtodo.note;
         import androidx.core.app.NotificationManagerCompat;
 
         ;import com.example.tagtodo.R;
-        import com.example.tagtodo.locationService.MyBackgroundLocationService;
 
 public class AlarmReceiver extends  BroadcastReceiver{
     private static final String CHANNEL_ID = "Channel";
@@ -32,13 +31,13 @@ public class AlarmReceiver extends  BroadcastReceiver{
         mp=MediaPlayer.create(context, R.raw.alert);
         String title = intent.getStringExtra("Title");
         String content = intent.getStringExtra("Content");
-        Toast.makeText(context, "IN AMARM", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "In Alarm", Toast.LENGTH_SHORT).show();
          notificationManager = NotificationManagerCompat.from(context);
         Intent activityintent = new Intent(context,AddNote.class);
         PendingIntent contentintent = PendingIntent.getActivity(context,0,activityintent,PendingIntent.FLAG_UPDATE_CURRENT);
         Intent in = new Intent(context,Dismiss.class);
         in.putExtra("Id",Notification_Id);
-//
+
         Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
         vibrator.vibrate(new long[] { 500,1000 },0);
         if(mp.isPlaying()) {

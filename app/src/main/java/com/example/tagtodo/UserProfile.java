@@ -4,11 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tagtodo.authentication.Login;
+import com.example.tagtodo.authentication.Register;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -74,9 +78,22 @@ public class UserProfile extends AppCompatActivity {
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-                phoneNumber.setText(documentSnapshot.getString("phone"));
-                fullName.setText(documentSnapshot.getString("fName"));
-                email.setText(documentSnapshot.getString("email"));
+                String name = documentSnapshot.getString("fName");
+                if(name != null){
+                    fullName.setText(name);
+                }
+                String number = documentSnapshot.getString("phone");
+                if(number!=null){
+                    phoneNumber.setText(number);
+                }else{
+                    phoneNumber.setVisibility(View.INVISIBLE);
+                    CardView c = findViewById(R.id.cardPhone);
+                    c.setVisibility(View.GONE);
+                }
+                String useremail = documentSnapshot.getString("email");
+                if(useremail != null) {
+                    email.setText(useremail);
+                }
             }
         });
 
@@ -93,7 +110,7 @@ public class UserProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final EditText resetMail = new EditText(v.getContext());
-                AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
+                AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(new ContextThemeWrapper(v.getContext(),R.style.AlertDialogCustom));
                 passwordResetDialog.setTitle("Reset Password");
                 passwordResetDialog.setMessage("Enter email to receive reset link ");
                 passwordResetDialog.setView(resetMail);
@@ -124,7 +141,19 @@ public class UserProfile extends AppCompatActivity {
                         // close the dialog
                     }
                 });
-                passwordResetDialog.create().show();
+
+//        warning.show();
+                AlertDialog alert = passwordResetDialog.create();
+                alert.show();
+                //    Customising buttons for dialog
+                Button p = alert.getButton(DialogInterface.BUTTON_POSITIVE);
+                p.setBackgroundColor(Color.parseColor("#222831"));
+                p.setTextColor(Color.parseColor("#D90091EA"));
+                Button n = alert.getButton(DialogInterface.BUTTON_NEGATIVE);
+                n.setBackgroundColor(Color.parseColor("#222831"));
+                n.setTextColor(Color.parseColor("#DEFFFFFF"));
+
+                alert.show();
             }
         });
 

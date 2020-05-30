@@ -155,7 +155,7 @@ public class MyBackgroundLocationService extends Service {
                             if (distanceBetweenPoints(latNote, latCurr, longNote, longCurr) <= res.getInteger(R.integer.distance)) {
                                 helper = new LocationResultHelper(getApplicationContext(), locations);
                                 helper.showNotification(key, noteHashMap.get(key), imageUri);
-                                helper.saveLocationResults();
+//                                helper.saveLocationResults();
                                 Toast.makeText(getApplicationContext(), "Complete task!" + locations.size(), Toast.LENGTH_SHORT).show();
                             }
                         }
@@ -225,7 +225,7 @@ public class MyBackgroundLocationService extends Service {
                         if (distanceBetweenPoints(latNote, latCurr, longNote, longCurr) <= res.getInteger(R.integer.distance)) {
                             helper = new LocationResultHelper(getApplicationContext(), locations);
                             helper.showNotification(key, noteHashMap.get(key), imageUri);
-                            helper.saveLocationResults();
+//                            helper.saveLocationResults();
                             Toast.makeText(getApplicationContext(), "Complete task!" + locations.size(), Toast.LENGTH_SHORT).show();
                         }
                     }

@@ -87,6 +87,8 @@
     <string name="location_service">Location Service</string>
     <string name="start">Start</string>
     <string name="stop">Stop</string>
+    <string name="guest_user">Guest User</string>
+    <string name="create_id_to_view_profile">Create ID to view profile</string>
 
     <plurals name="num_locations_reported">
         <item quantity="zero">No location reported</item>

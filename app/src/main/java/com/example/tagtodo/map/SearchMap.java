@@ -209,7 +209,7 @@ public class SearchMap extends AppCompatActivity implements OnMapReadyCallback, 
                         } else {
                             // Switch the button appearance back to select a location.
                             selectLocationButton.setBackgroundColor(
-                                    ContextCompat.getColor(SearchMap.this, R.color.colorPrimary));
+                                    ContextCompat.getColor(SearchMap.this, R.color.colorSecondary));
                             selectLocationButton.setText(getString(R.string.select_location));
 
                             // Show the red hovering ImageView marker

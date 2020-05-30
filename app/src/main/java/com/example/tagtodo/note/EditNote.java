@@ -191,12 +191,15 @@ public class EditNote extends AppCompatActivity {
                 note.put("location",nLoc);
                 note.put("latitude",getIntent().getStringExtra("latitude"));
                 note.put("longitude",getIntent().getStringExtra("longitude"));
+                note.put("alarm",alarmDetails.getText());
 
                 docref.update(note).addOnSuccessListener(new OnSuccessListener<Void>() {   // Check whether saving was successful
                     @Override
                     public void onSuccess(Void aVoid) {
                         //alarm
-                        GetNotification(now);
+                        if(!alarmDetails.getText().equals("Alarm")) {
+                            GetNotification(now);
+                        }
                             //  Save Image to firebase storage
                             uploadImageToFirebase(image,docref);
 
@@ -582,9 +585,7 @@ public class EditNote extends AppCompatActivity {
 
         PendingIntent Pendingintent = PendingIntent.getBroadcast(this,1,intent,0);;
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        alarmManager.setExact(AlarmManager.RTC_WAKEUP, 4000,Pendingintent);
-//        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP,now.getTimeInMillis(),10*60*1000,Pendingintent);
-//        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,now.getTimeInMillis(),10*60*1000,Pendingintent);
+        alarmManager.setExact(AlarmManager.RTC_WAKEUP, now.getTimeInMillis(),Pendingintent);
     }
 
 

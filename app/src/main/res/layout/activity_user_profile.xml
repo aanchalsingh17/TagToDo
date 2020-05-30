@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserProfile"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/textDark">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardProfile"
@@ -57,9 +57,9 @@
     <LinearLayout
         android:id="@+id/vertical_list"
         android:layout_width="411dp"
-        android:layout_height="167dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="129dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/textDark"
         android:gravity="bottom"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
@@ -101,7 +101,7 @@
                 android:fontFamily="@font/arya"
                 android:gravity="center_horizontal|center_vertical"
                 android:padding="5dp"
-                android:text="@string/your_name"
+                android:text="@string/guest_user"
                 android:textColor="@color/textHint"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -143,7 +143,7 @@
                 android:fontFamily="@font/arya"
                 android:gravity="center_horizontal|center_vertical"
                 android:padding="5dp"
-                android:text="@string/your_email_adderss"
+                android:text="@string/guest_tagtodo_com"
                 android:textColor="@color/textHint"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -152,6 +152,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardPhone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="40dp"
@@ -185,7 +186,7 @@
                 android:fontFamily="@font/arya"
                 android:gravity="center_horizontal|center_vertical"
                 android:padding="5dp"
-                android:text="@string/phone_number"
+                android:text="@string/create_id_to_view_profile"
                 android:textColor="@color/textHint"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -215,7 +216,8 @@
         android:layout_height="wrap_content"
         android:padding="20dp"
         android:layout_marginTop="10dp"
-        android:background="@color/ic_launcher_background"
+        android:textColor="@color/textDark"
+        android:backgroundTint="@color/ic_launcher_background"
         android:text="@string/verify"
         app:layout_constraintTop_toBottomOf="@+id/verify_status"
         app:layout_constraintStart_toStartOf="parent"
@@ -248,7 +250,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
-            android:background="@color/colorSecondary"
+            android:backgroundTint="@color/colorSecondary"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
             android:text="@string/reset_password"
@@ -268,7 +270,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
-            android:background="@color/colorSecondary"
+            android:backgroundTint="@color/colorSecondary"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
             android:text="@string/home"

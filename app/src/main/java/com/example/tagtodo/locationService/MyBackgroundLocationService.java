@@ -68,6 +68,7 @@ public class MyBackgroundLocationService extends Service {
     private String latitude;
     private String longitude;
     private String noteId;
+    private String alarmDetails;
     public static MediaPlayer mp;
 
 
@@ -99,8 +100,10 @@ public class MyBackgroundLocationService extends Service {
                         location = (String) document.get("location");
                         latitude = (String) document.get("latitude");
                         longitude = (String) document.get("longitude");
+                        alarmDetails = (String)document.get("alarm");
 
-                        note = new Note(title, content, location, latitude, longitude);
+
+                        note = new Note(title, content, location, latitude, longitude,alarmDetails);
                         noteId = document.getId();
                         imageUri = "Users/" + fUser.getUid() + "/" + noteId + "/Images.jpeg";
 
@@ -183,7 +186,8 @@ public class MyBackgroundLocationService extends Service {
                         location = (String) document.get("location");
                         latitude = (String) document.get("latitude");
                         longitude = (String) document.get("longitude");
-                        note = new Note(title, content, location, latitude, longitude);
+                        alarmDetails = (String) document.get("alarm");
+                        note = new Note(title, content, location, latitude, longitude,alarmDetails);
                         final String imageUri = "Users/" + fUser.getUid() + "/" + noteId + "/Images.jpeg";
                         noteId = document.getId();
                         noteHashMap.put(noteId, note);
@@ -288,12 +292,10 @@ public class MyBackgroundLocationService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-//        startForeground(1001, getNotification());
-//        getLocationUpdates();
+
         Toast.makeText(this, "Destroyed", Toast.LENGTH_SHORT).show();
-//        stopForeground(true);
-        stopForeground(false);
-//        mLocationClient.removeLocationUpdates(mLocationCallback);
+        stopForeground(true);
+        mLocationClient.removeLocationUpdates(mLocationCallback);
     }
 
 

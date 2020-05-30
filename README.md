@@ -3,6 +3,15 @@
 An advance note taking and reminder application for Android.  
 
 
+## Table of Contents
+
+- [Features](#features)
+- [App Permissions](#app permissions)
+- [Note for contributors](#note for contributors)
+- [Feedback](#feedback)
+- [Contributors](#contributors)
+
+
 ## Features
 
 Tag To Do holds following features -
@@ -32,6 +41,26 @@ Tag To Do holds following features -
 * Background location access (to run location service)
 * Storage access(Read and write)
 * Camera permissions
+
+
+## Note for contributors
+Feel free to report issues and bugs.It will be helpful for future launches of application.</li>
+  <li>All Suggestions are welcome.</li>
+  <li>Fork repository and Contribute.</li>
+  
+* Download the source code from https://github.com/aditya2548/TagToDo
+* Extract the content of zip file.
+( If you are comfortable using git then you can also clone the repo and skip above two steps )
+
+* Open the project in Android Studio
+* Create a mapbox account and generate your access token.
+* Make a keys.xml file in /app/src/main/res/values/ to store your Mapbox key as:
+    <string name="access_token">Replace this with your key</string>
+
+
+## Feedback
+
+Feel free to send us feedback on [Email](mailto:aditya25dec2000@gmail.com)
 
 
 ## Contributors

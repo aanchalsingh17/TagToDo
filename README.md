@@ -49,7 +49,7 @@ Tag To Do holds following features -
 * Fork repository and Contribute.
 * Download the source code from https://github.com/aditya2548/TagToDo
 * Extract the content of zip file.
-( If you are comfortable using git then you can also clone the repo and skip above two steps )
+- (If you are comfortable using git then you can also clone the repo and skip above two steps)
 
 * Open the project in Android Studio
 * Create a mapbox account and generate your access token.

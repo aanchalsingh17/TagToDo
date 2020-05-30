@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".note.EditNote"
+    android:background="@color/colorPrimary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarEditText"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <EditText
+            android:id="@+id/editNoteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:ems="10"
+            android:fadeScrollbars="false"
+            android:hint="@string/note_title"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:selectAllOnFocus="true"
+            android:text="@string/untitled"
+            android:textColor="@color/text"
+            android:textColorHint="@color/textHint"
+            android:textCursorDrawable="@null"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarEditText">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/editNoteImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/add_note_image"
+                android:longClickable="false"
+                android:maxWidth="250dp"
+                android:maxHeight="250dp"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/editNoteContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:ems="10"
+                android:gravity="start|top"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:textColor="@color/text"
+                android:textColorHint="@color/textHint"
+                android:layout_below="@id/editNoteImage"/>
+
+            <TextView
+                android:id="@+id/locationDetails_editNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/ic_pin_drop_black_24dp"
+                android:text="@string/location"
+                android:textColor="@color/text"
+                android:visibility="invisible"
+                android:layout_below="@id/editNoteContent"/>
+            <TextView
+                android:id="@+id/alarmDetails_editNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/locationDetails_editNote"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:drawableStart="@drawable/ic_alarm_on_black_24dp"
+                android:text="@string/alarm"
+                android:drawablePadding="5dp"
+                android:textColor="@color/text"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/saveEditNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:background="@color/colorSecondary"
+        android:elevation="5dp"
+        app:rippleColor="@color/colorRipple"
+        app:backgroundTint="@color/colorSecondary"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="30dp"
+        app:srcCompat="@drawable/ic_save_black_24dp" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar_editNote"
+        style="@style/MyProgressBarRectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/editNoteCapture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:background="@color/colorSecondary"
+            android:elevation="5dp"
+            app:backgroundTint="@color/colorSecondary"
+            app:elevation="5dp"
+            app:maxImageSize="30dp"
+            app:rippleColor="@color/colorRipple"
+            app:srcCompat="@drawable/ic_camera_black" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/editNoteImageSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:background="@color/colorSecondary"
+            android:elevation="5dp"
+            app:backgroundTint="@color/colorSecondary"
+            app:elevation="5dp"
+            app:maxImageSize="30dp"
+            app:rippleColor="@color/colorRipple"
+            app:srcCompat="@drawable/ic_attach_file_black" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

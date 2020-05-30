@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "198761434051",
+    "firebase_url": "https://tagtodo25.firebaseio.com",
+    "project_id": "tagtodo25",
+    "storage_bucket": "tagtodo25.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198761434051:android:b644ead8d0fb528b770b76",
+        "android_client_info": {
+          "package_name": "com.example.tagtodo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "198761434051-qnbn0bcc79h117aqvt01d78bho5ebo24.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk0RA6KXr09aXgjl6EDErwBOSJ6lzkfgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "198761434051-qnbn0bcc79h117aqvt01d78bho5ebo24.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

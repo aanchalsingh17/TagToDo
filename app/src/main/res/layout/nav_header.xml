@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/nav">
+
+        <TextView
+            android:id="@+id/appNameNav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/autour_one"
+            android:paddingStart="30dp"
+            android:paddingEnd="10dp"
+            android:text="@string/app_name"
+            android:textColor="@color/text"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/appSlogan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/appSlogan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="10dp"
+            android:text="@string/title_desc"
+            android:textColor="@color/text"
+            android:textSize="12sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/usernameNav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/usernameNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="30dp"
+            android:paddingEnd="10dp"
+            android:text="@string/guest"
+            android:textAlignment="viewStart"
+            android:textColor="@color/text"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/emailNav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/emailNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="30dp"
+            android:paddingEnd="10dp"
+            android:text="@string/guest_tagtodo_com"
+            android:textAlignment="viewStart"
+            android:textColor="@color/text"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#916767</item>
+        <item name="buttonBarPositiveButtonStyle">@style/AlertDialogCustom</item>
+
+    </style>
+
+    <!-- Style for progress bar. -->
+    <style name="MyProgressBarRectangle" parent="@style/Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/progressbar</item>
+        <item name="android:minHeight">80dp</item>
+        <item name="android:minWidth">200dp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+<!--    for alert dialog-->
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+    </style>
+
+</resources>

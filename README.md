@@ -44,10 +44,9 @@ Tag To Do holds following features -
 
 
 ## Note for contributors
-Feel free to report issues and bugs.It will be helpful for future launches of application.</li>
-  <li>All Suggestions are welcome.</li>
-  <li>Fork repository and Contribute.</li>
-  
+
+* All Suggestions are welcome.
+* Fork repository and Contribute.
 * Download the source code from https://github.com/aditya2548/TagToDo
 * Extract the content of zip file.
 ( If you are comfortable using git then you can also clone the repo and skip above two steps )
@@ -60,7 +59,8 @@ Feel free to report issues and bugs.It will be helpful for future launches of ap
 
 ## Feedback
 
-Feel free to send us feedback on [Email](mailto:aditya25dec2000@gmail.com)
+Feel free to report issues and bugs.It will be helpful for future launches of application.
+Send us feedback on [Email](mailto:aditya25dec2000@gmail.com)
 
 
 ## Contributors

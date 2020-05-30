@@ -71,7 +71,6 @@
     <string name="guest">Guest</string>
 
     <!--    Strings used for map activity-->
-    <string name="access_token">pk.eyJ1IjoiYWRpdHlhNDMwIiwiYSI6ImNrOHB1c3VmcjAyaXczbm55ajRzeDBldGkifQ.FpIV1irwej--hJX9uSyWGA</string>
     <string name="my_loc">MY_LOC</string>
     <string name="current_location">"Current location: "</string>
     <string name="user_location_permission_explanation">Explain</string>

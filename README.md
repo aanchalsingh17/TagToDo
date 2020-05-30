@@ -6,8 +6,8 @@ An advance note taking and reminder application for Android.
 ## Table of Contents
 
 - [Features](#features)
-- [App Permissions](#app permissions)
-- [Note for contributors](#note for contributors)
+- [App Permissions](#apppermissions)
+- [Note for contributors](#noteforcontributors)
 - [Feedback](#feedback)
 - [Contributors](#contributors)
 

@@ -14,7 +14,7 @@ An advance note taking and reminder application for Android.
 
 ## Features
 
-Tag To Do holds following features -
+Tag To Do holds the following features -
 
 * Take user notes with title and content
 * User account
